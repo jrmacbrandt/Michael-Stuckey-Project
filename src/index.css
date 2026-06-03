@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Dynamic Chrome Typographic Effect */
+  .chrome-text {
+    font-family: "Space Grotesk", "Montserrat", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #f8f9fa 28%,
+      #c8cace 44%,
+      #4b4d52 48%,
+      #ffffff 52%,
+      #dfdfdf 75%,
+      #8d9299 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    
+    /* 3D shadows and high-contrast outline */
+    filter: 
+      drop-shadow(0 2px 0px rgba(0, 0, 0, 0.95))
+      drop-shadow(0 4px 6px rgba(0, 0, 0, 0.9))
+      drop-shadow(0 10px 20px rgba(0, 0, 0, 0.75))
+      drop-shadow(0px -1px 2px rgba(255, 255, 255, 0.8));
+    
+    /* Strong metal outline */
+    -webkit-text-stroke: 2px #000000;
+    letter-spacing: -0.04em;
+  }
+
+  /* Slant border clip path for dynamic composition */
+  .slant-clip {
+    clip-path: polygon(0 48px, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .slant-clip-reverse {
+    clip-path: polygon(0 0, 100% 48px, 100% 100%, 0 100%);
+  }
+
+  /* Custom glow classes for refined neon/gold tones */
+  .gold-glow {
+    text-shadow: 0 0 12px rgba(234, 179, 8, 0.3);
+  }
+  
+  .purple-glow {
+    box-shadow: 0 0 30px rgba(48, 2, 68, 0.4);
+  }
+
+  /* Equalizer Animation */
+  @keyframes eq-bounce {
+    0%, 100% { transform: scaleY(0.3); }
+    50% { transform: scaleY(1); }
+  }
+
+  .eq-bar {
+    transform-origin: bottom;
+    animation: eq-bounce 1s infinite ease-in-out;
+  }
+}
+
+/* Custom scrollbar to maintain theme consistency */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #14051a;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a1d5a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd133;
+}

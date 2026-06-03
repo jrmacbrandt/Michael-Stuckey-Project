@@ -1,0 +1,6 @@
+{
+  "name": "Michael Stuckey Hero Section",
+  "description": "Responsive web adaptation of the Michael Stuckey hero section with interactive controls, custom chrome typography, and picture upload.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
